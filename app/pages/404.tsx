@@ -26,7 +26,7 @@ const Custom404 = () => {
           |
         </Typography>
         <Typography marginLeft={2} fontWeight={400} textAlign="center">
-          Whoops, couldn't find the page you were looking for.
+          Whoops, couldnt find the page you were looking for.
         </Typography>
       </Box>
     </ShopLayout>
