@@ -25,7 +25,12 @@ const SearchPage: NextPage<Props> = ({ query, products, foundProducts }) => {
             <Typography variant="h1" component="h1">
               Results for
             </Typography>
-            <Typography variant="h2" sx={{ mb: 1 }}>
+            <Typography
+              variant="h2"
+              sx={{ mb: 1 }}
+              textTransform={"capitalize"}
+              color="secondary"
+            >
               {query}
             </Typography>
           </>
@@ -36,7 +41,12 @@ const SearchPage: NextPage<Props> = ({ query, products, foundProducts }) => {
             </Typography>
             <Box display="flex" sx={{ mb: 1 }}>
               <Typography variant="h2">No results for</Typography>
-              <Typography variant="h2" color="secondary" sx={{ pl: 1 }}>
+              <Typography
+                variant="h2"
+                color="secondary"
+                sx={{ pl: 1 }}
+                textTransform={"capitalize"}
+              >
                 {query}
               </Typography>
               <Typography variant="h2">
