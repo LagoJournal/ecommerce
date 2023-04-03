@@ -1,10 +1,13 @@
 import { IProduct } from "@/interfaces";
 import { Typography } from "@mui/material";
 import { ShopLayout } from "../components/layouts";
-import { initialData } from "../database/products";
 import { ProductList } from "@/components/products";
+import { useProducts } from "@/hooks";
+import { Loading } from "@/components/ui";
 
 export default function Home() {
+  const { products, isLoading } = useProducts("/products");
+
   return (
     <>
       <ShopLayout
@@ -17,8 +20,7 @@ export default function Home() {
         <Typography variant="h2" sx={{ mb: 1 }}>
           All Products
         </Typography>
-
-        <ProductList products={initialData.products as IProduct[]} />
+        {isLoading ? <Loading /> : <ProductList products={products} />}
       </ShopLayout>
     </>
   );
